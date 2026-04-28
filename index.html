@@ -2922,110 +2922,6 @@ body:has(#screen0:not(.hidden)){
     </button>
   </div>
 
-  <!-- Tea prompt — shown after Home button, once every 3 days -->
-  <div class="support-overlay" id="teaPromptOverlay" onclick="if(event.target===this)closeTeaPrompt()">
-    <div class="support-modal" id="teaPromptModal">
-      <div class="support-modal-handle"></div>
-      <div style="text-align:center;margin-bottom:0.5rem;line-height:1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="52" height="52" fill="none" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg></div>
-      <div class="support-modal-title">Enjoyed the clock?</div>
-      <div class="support-modal-sub" style="margin-bottom:1.3rem">ChessConnect Clock is free forever. If it has been useful at the board in practice, tournaments, or coaching, consider supporting it with a small tea.</div>
-      <button onclick="teaPromptSupport()" style="width:100%;padding:0.9rem;border-radius:12px;border:none;background:#F59E0B;color:#fff;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:800;cursor:pointer;box-shadow:0 4px 14px rgba(245,158,11,0.3);margin-bottom:0.55rem;-webkit-tap-highlight-color:transparent"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg> Support this project</button>
-      <button onclick="closeTeaPrompt()" style="width:100%;padding:0.8rem;border-radius:12px;border:1.5px solid #E5E9F2;background:#fff;color:#6B7280;font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:700;cursor:pointer;margin-bottom:0.5rem;-webkit-tap-highlight-color:transparent">Maybe later</button>
-      <div style="text-align:center">
-        <button onclick="suppressTeaPromptForever()" style="background:none;border:none;color:#9CA3AF;font-family:'DM Sans',sans-serif;font-size:0.7rem;font-weight:600;cursor:pointer;text-decoration:underline;padding:0.25rem">Don't show again</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Support / Buy me a tea modal -->
-  <div class="support-overlay" id="supportOverlay" onclick="closeSupportModalOutside(event)">
-    <div class="support-modal" id="supportModal">
-      <div class="support-modal-handle"></div>
-      <div class="support-modal-title" style="display:flex;align-items:center;justify-content:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg> Buy me a tea</div>
-      <div class="support-modal-sub">ChessConnect Clock is free forever. If it has been useful at the board in practice, tournaments, or coaching, consider supporting it with a small tea.</div>
-
-      <!-- UPI -->
-      <div class="support-option" id="sopt-upi">
-        <div class="support-option-header" onclick="toggleSupportOption('upi')">
-          <div class="support-option-icon" style="background:#fff;padding:0;overflow:hidden;border-radius:8px;border:1px solid #E5E9F2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 130" width="34" height="34">
-  <rect width="200" height="130" fill="#fff"/>
-  <!-- UPI bold grey letters -->
-  <text x="10" y="82" font-family="Arial Black,Arial,sans-serif" font-size="72" font-weight="900" fill="#808080" letter-spacing="-2">UPI</text>
-  <!-- Orange arrow/chevron (front) -->
-  <polygon points="155,15 185,55 155,95 170,95 200,55 170,15" fill="#F47920"/>
-  <!-- Green arrow/chevron (back, slightly left) -->
-  <polygon points="138,15 168,55 138,95 153,95 183,55 153,15" fill="#2D8A4E"/>
-  <!-- Tagline -->
-  <text x="100" y="118" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#808080" text-anchor="middle" letter-spacing="0.5">UNIFIED PAYMENTS INTERFACE</text>
-</svg></div>
-          <div class="support-option-label">
-            <div class="support-option-name">UPI (India)</div>
-            <div class="support-option-hint">GPay · PhonePe · Paytm · any UPI app</div>
-          </div>
-          <div class="support-option-chevron">›</div>
-        </div>
-        <div class="support-option-body">
-          <div class="support-address-row">
-            <div class="support-address-label">UPI ID</div>
-            <div class="support-address-val" id="upi-addr">gb78@icici</div>
-            <button class="support-copy-btn" onclick="copySupport('upi-addr',this)">Copy</button>
-          </div>
-          <div class="support-qr-wrap">
-            <img class="support-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&margin=8&data=upi%3A%2F%2Fpay%3Fpa%3Dgb78%40icici" alt="UPI QR code" loading="lazy"/>
-            <div class="support-qr-hint">Scan with GPay · PhonePe · Paytm</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- USDT TRC20 -->
-      <div class="support-option" id="sopt-trc">
-        <div class="support-option-header" onclick="toggleSupportOption('trc')">
-          <div class="support-option-icon" style="background:#E8F5E9;padding:0;overflow:hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340" width="34" height="34"><polygon points="170,10 330,100 330,240 170,330 10,240 10,100" fill="#26A17B"/><path d="M188,152v-28h66V96H86v28h66v28c-52,4-91,18-91,34s39,30,91,34v86h26v-86c52-4,91-18,91-34s-39-30-91-34z M170,210c-50,0-89-12-89-26s39-26,89-26s89,12,89,26s-39,26-89,26z" fill="#fff"/></svg></div>
-          <div class="support-option-label">
-            <div class="support-option-name">USDT — TRC20 (Tron)</div>
-            <div class="support-option-hint">Send on Tron network only</div>
-          </div>
-          <div class="support-option-chevron">›</div>
-        </div>
-        <div class="support-option-body">
-          <div class="support-address-row">
-            <div class="support-address-label">Address</div>
-            <div class="support-address-val" id="trc-addr">TNEkXGHUVVjqqVTLagwepJuJuod7nRazN2</div>
-            <button class="support-copy-btn" onclick="copySupport('trc-addr',this)">Copy</button>
-          </div>
-          <div class="support-qr-wrap">
-            <img class="support-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&margin=8&data=TNEkXGHUVVjqqVTLagwepJuJuod7nRazN2" alt="TRC20 USDT QR code" loading="lazy"/>
-            <div class="support-qr-hint">Scan with Trust Wallet · Binance · any TRC20 wallet</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- USDT BEP20 -->
-      <div class="support-option" id="sopt-bsc">
-        <div class="support-option-header" onclick="toggleSupportOption('bsc')">
-          <div class="support-option-icon" style="background:#E8F5E9;padding:0;overflow:hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340" width="34" height="34"><polygon points="170,10 330,100 330,240 170,330 10,240 10,100" fill="#26A17B"/><path d="M188,152v-28h66V96H86v28h66v28c-52,4-91,18-91,34s39,30,91,34v86h26v-86c52-4,91-18,91-34s-39-30-91-34z M170,210c-50,0-89-12-89-26s39-26,89-26s89,12,89,26s-39,26-89,26z" fill="#fff"/></svg></div>
-          <div class="support-option-label">
-            <div class="support-option-name">USDT — BEP20 (BSC)</div>
-            <div class="support-option-hint">Send on BNB Smart Chain only</div>
-          </div>
-          <div class="support-option-chevron">›</div>
-        </div>
-        <div class="support-option-body">
-          <div class="support-address-row">
-            <div class="support-address-label">Address</div>
-            <div class="support-address-val" id="bsc-addr">0x41E8e679116a942913fc98bD0f4a9FEc7dDBF91B</div>
-            <button class="support-copy-btn" onclick="copySupport('bsc-addr',this)">Copy</button>
-          </div>
-          <div class="support-qr-wrap">
-            <img class="support-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&margin=8&data=0x41E8e679116a942913fc98bD0f4a9FEc7dDBF91B" alt="BEP20 USDT QR code" loading="lazy"/>
-            <div class="support-qr-hint">Scan with Trust Wallet · MetaMask · any BEP20 wallet</div>
-          </div>
-        </div>
-      </div>
-
-      <button class="support-modal-close" onclick="closeSupportModal()">Maybe later</button>
-    </div>
-  </div>
 
   <!-- Feedback card -->
   <div class="s1-feedback">
@@ -4974,5 +4870,110 @@ pickTC(600, 5, '10+5', document.getElementById('tc-10+5'));
 })();
 </script>
 <div class="fit-exit-hint" id="fitExitHint">Tap FIT again to exit · Swipe up for browser controls</div>
+  <!-- Tea prompt — shown after Home button, once every 3 days -->
+  <div class="support-overlay" id="teaPromptOverlay" onclick="if(event.target===this)closeTeaPrompt()">
+    <div class="support-modal" id="teaPromptModal">
+      <div class="support-modal-handle"></div>
+      <div style="text-align:center;margin-bottom:0.5rem;line-height:1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="52" height="52" fill="none" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg></div>
+      <div class="support-modal-title">Enjoyed the clock?</div>
+      <div class="support-modal-sub" style="margin-bottom:1.3rem">ChessConnect Clock is free forever. If it has been useful at the board in practice, tournaments, or coaching, consider supporting it with a small tea.</div>
+      <button onclick="teaPromptSupport()" style="width:100%;padding:0.9rem;border-radius:12px;border:none;background:#F59E0B;color:#fff;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:800;cursor:pointer;box-shadow:0 4px 14px rgba(245,158,11,0.3);margin-bottom:0.55rem;-webkit-tap-highlight-color:transparent"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg> Support this project</button>
+      <button onclick="closeTeaPrompt()" style="width:100%;padding:0.8rem;border-radius:12px;border:1.5px solid #E5E9F2;background:#fff;color:#6B7280;font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:700;cursor:pointer;margin-bottom:0.5rem;-webkit-tap-highlight-color:transparent">Maybe later</button>
+      <div style="text-align:center">
+        <button onclick="suppressTeaPromptForever()" style="background:none;border:none;color:#9CA3AF;font-family:'DM Sans',sans-serif;font-size:0.7rem;font-weight:600;cursor:pointer;text-decoration:underline;padding:0.25rem">Don't show again</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Support / Buy me a tea modal -->
+  <div class="support-overlay" id="supportOverlay" onclick="closeSupportModalOutside(event)">
+    <div class="support-modal" id="supportModal">
+      <div class="support-modal-handle"></div>
+      <div class="support-modal-title" style="display:flex;align-items:center;justify-content:center;gap:6px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0"><path d="M17 8h1a4 4 0 0 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg> Buy me a tea</div>
+      <div class="support-modal-sub">ChessConnect Clock is free forever. If it has been useful at the board in practice, tournaments, or coaching, consider supporting it with a small tea.</div>
+
+      <!-- UPI -->
+      <div class="support-option" id="sopt-upi">
+        <div class="support-option-header" onclick="toggleSupportOption('upi')">
+          <div class="support-option-icon" style="background:#fff;padding:0;overflow:hidden;border-radius:8px;border:1px solid #E5E9F2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 130" width="34" height="34">
+  <rect width="200" height="130" fill="#fff"/>
+  <!-- UPI bold grey letters -->
+  <text x="10" y="82" font-family="Arial Black,Arial,sans-serif" font-size="72" font-weight="900" fill="#808080" letter-spacing="-2">UPI</text>
+  <!-- Orange arrow/chevron (front) -->
+  <polygon points="155,15 185,55 155,95 170,95 200,55 170,15" fill="#F47920"/>
+  <!-- Green arrow/chevron (back, slightly left) -->
+  <polygon points="138,15 168,55 138,95 153,95 183,55 153,15" fill="#2D8A4E"/>
+  <!-- Tagline -->
+  <text x="100" y="118" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#808080" text-anchor="middle" letter-spacing="0.5">UNIFIED PAYMENTS INTERFACE</text>
+</svg></div>
+          <div class="support-option-label">
+            <div class="support-option-name">UPI (India)</div>
+            <div class="support-option-hint">GPay · PhonePe · Paytm · any UPI app</div>
+          </div>
+          <div class="support-option-chevron">›</div>
+        </div>
+        <div class="support-option-body">
+          <div class="support-address-row">
+            <div class="support-address-label">UPI ID</div>
+            <div class="support-address-val" id="upi-addr">gb78@icici</div>
+            <button class="support-copy-btn" onclick="copySupport('upi-addr',this)">Copy</button>
+          </div>
+          <div class="support-qr-wrap">
+            <img class="support-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&margin=8&data=upi%3A%2F%2Fpay%3Fpa%3Dgb78%40icici" alt="UPI QR code" loading="lazy"/>
+            <div class="support-qr-hint">Scan with GPay · PhonePe · Paytm</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- USDT TRC20 -->
+      <div class="support-option" id="sopt-trc">
+        <div class="support-option-header" onclick="toggleSupportOption('trc')">
+          <div class="support-option-icon" style="background:#E8F5E9;padding:0;overflow:hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340" width="34" height="34"><polygon points="170,10 330,100 330,240 170,330 10,240 10,100" fill="#26A17B"/><path d="M188,152v-28h66V96H86v28h66v28c-52,4-91,18-91,34s39,30,91,34v86h26v-86c52-4,91-18,91-34s-39-30-91-34z M170,210c-50,0-89-12-89-26s39-26,89-26s89,12,89,26s-39,26-89,26z" fill="#fff"/></svg></div>
+          <div class="support-option-label">
+            <div class="support-option-name">USDT — TRC20 (Tron)</div>
+            <div class="support-option-hint">Send on Tron network only</div>
+          </div>
+          <div class="support-option-chevron">›</div>
+        </div>
+        <div class="support-option-body">
+          <div class="support-address-row">
+            <div class="support-address-label">Address</div>
+            <div class="support-address-val" id="trc-addr">TNEkXGHUVVjqqVTLagwepJuJuod7nRazN2</div>
+            <button class="support-copy-btn" onclick="copySupport('trc-addr',this)">Copy</button>
+          </div>
+          <div class="support-qr-wrap">
+            <img class="support-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&margin=8&data=TNEkXGHUVVjqqVTLagwepJuJuod7nRazN2" alt="TRC20 USDT QR code" loading="lazy"/>
+            <div class="support-qr-hint">Scan with Trust Wallet · Binance · any TRC20 wallet</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- USDT BEP20 -->
+      <div class="support-option" id="sopt-bsc">
+        <div class="support-option-header" onclick="toggleSupportOption('bsc')">
+          <div class="support-option-icon" style="background:#E8F5E9;padding:0;overflow:hidden"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340" width="34" height="34"><polygon points="170,10 330,100 330,240 170,330 10,240 10,100" fill="#26A17B"/><path d="M188,152v-28h66V96H86v28h66v28c-52,4-91,18-91,34s39,30,91,34v86h26v-86c52-4,91-18,91-34s-39-30-91-34z M170,210c-50,0-89-12-89-26s39-26,89-26s89,12,89,26s-39,26-89,26z" fill="#fff"/></svg></div>
+          <div class="support-option-label">
+            <div class="support-option-name">USDT — BEP20 (BSC)</div>
+            <div class="support-option-hint">Send on BNB Smart Chain only</div>
+          </div>
+          <div class="support-option-chevron">›</div>
+        </div>
+        <div class="support-option-body">
+          <div class="support-address-row">
+            <div class="support-address-label">Address</div>
+            <div class="support-address-val" id="bsc-addr">0x41E8e679116a942913fc98bD0f4a9FEc7dDBF91B</div>
+            <button class="support-copy-btn" onclick="copySupport('bsc-addr',this)">Copy</button>
+          </div>
+          <div class="support-qr-wrap">
+            <img class="support-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&margin=8&data=0x41E8e679116a942913fc98bD0f4a9FEc7dDBF91B" alt="BEP20 USDT QR code" loading="lazy"/>
+            <div class="support-qr-hint">Scan with Trust Wallet · MetaMask · any BEP20 wallet</div>
+          </div>
+        </div>
+      </div>
+
+      <button class="support-modal-close" onclick="closeSupportModal()">Maybe later</button>
+    </div>
+  </div>
+
 </body>
 </html>

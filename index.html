@@ -2399,6 +2399,16 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
   display:flex;
   flex-direction:column;
   font-family:'DM Sans',sans-serif;
+  width:100%;
+  max-width:100%;
+  align-self:stretch;
+  margin:0;
+}
+/* Override body centering for landing page */
+body:has(#screen0:not(.hidden)){
+  align-items:stretch;
+  justify-content:flex-start;
+  background:#fff;
 }
 
 /* Nav */

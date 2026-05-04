@@ -538,7 +538,7 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
 /* ─── PRESET STRIP (inline in clock view) ─── */
 /* Status */
 .clock-status{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:6px;flex-shrink:0}
-.sdot{width:5px;height:5px;border-radius:50%;background:#C4873A;opacity:0;transition:opacity 0.3s}
+.sdot{width:5px;height:5px;border-radius:50%;background:#C4873A;opacity:0;transition:opacity 0.05s}
 .sdot.on{animation:dotPulse 1.5s ease infinite}
 .stext{font-size:0.58rem;font-weight:700;color:#333;text-transform:uppercase;letter-spacing:0.1em}
 
@@ -667,23 +667,23 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
 /* Displays */
 .hc-displays{display:flex;padding:0 80px;position:relative;z-index:2;gap:0}
 .hc-dunit{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px}
-.hc-plbl{font-size:0.62rem;font-family:'DM Sans',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:0.14em;color:rgba(220,175,80,0.82);transition:color 0.3s;text-shadow:0 1px 3px rgba(0,0,0,0.5)}
+.hc-plbl{font-size:0.62rem;font-family:'DM Sans',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:0.14em;color:rgba(220,175,80,0.82);transition:color 0.05s;text-shadow:0 1px 3px rgba(0,0,0,0.5)}
 .hc-dunit.active .hc-plbl{color:rgba(230,185,80,0.95);text-shadow:0 0 8px rgba(196,135,58,0.3),0 1px 3px rgba(0,0,0,0.5)}
 .hc-disp{
   width:100%;background:#070503;border-radius:7px;
   border:1.5px solid rgba(120,75,25,0.55);
   padding:9px 5px 7px;text-align:center;position:relative;overflow:hidden;
   box-shadow:inset 0 4px 14px rgba(0,0,0,0.88),inset 0 1px 4px rgba(0,0,0,0.94);
-  transition:border-color 0.3s,box-shadow 0.3s;
+  transition:border-color 0.05s,box-shadow 0.05s;
 }
 .hc-disp::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(255,255,255,0.022) 0%,transparent 60%);pointer-events:none}
 .hc-dunit.active .hc-disp{border-color:rgba(196,135,58,0.65);box-shadow:inset 0 4px 14px rgba(0,0,0,0.92),0 0 18px rgba(196,135,58,0.18),0 0 45px rgba(196,135,58,0.07)}
 .hc-dunit.flagged .hc-disp{border-color:#FF3A3A!important;animation:flagPulse 0.5s ease infinite alternate}
-.hc-time{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(2.2rem,10.5vw,3rem);letter-spacing:0.06em;color:#7A5520;line-height:1;transition:color 0.3s,text-shadow 0.3s;user-select:none;font-variant-numeric:tabular-nums}
+.hc-time{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(2.2rem,10.5vw,3rem);letter-spacing:0.06em;color:#7A5520;line-height:1;transition:color 0.05s,text-shadow 0.05s;user-select:none;font-variant-numeric:tabular-nums}
 .hc-dunit.active .hc-time{color:#E8C870;text-shadow:0 0 10px rgba(232,200,112,0.55),0 0 28px rgba(232,200,112,0.28),0 0 52px rgba(232,200,112,0.1)}
 .hc-dunit.flagged .hc-time{color:#FF3A3A!important;text-shadow:0 0 12px rgba(255,58,58,0.6)!important}
 .hc-dunit.warning .hc-time{color:#FF8C00!important;text-shadow:0 0 10px rgba(255,140,0,0.55)!important;animation:warnBlink 1s ease infinite}
-.hc-moves{font-size:0.58rem;color:rgba(160,110,45,0.65);font-family:'DM Sans',sans-serif;transition:color 0.3s;font-weight:600}
+.hc-moves{font-size:0.58rem;color:rgba(160,110,45,0.65);font-family:'DM Sans',sans-serif;transition:color 0.05s;font-weight:600}
 .hc-dunit.active .hc-moves{color:rgba(210,165,65,0.8)}
 .hc-inc{position:absolute;bottom:4px;right:6px;font-size:0.5rem;font-family:'DM Sans',sans-serif;color:rgba(180,130,50,0.65);font-weight:700;letter-spacing:0.04em}
 .hc-divider{width:1px;background:linear-gradient(180deg,transparent,rgba(196,135,58,0.12),transparent);margin:4px 3px;flex-shrink:0}
@@ -762,7 +762,7 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
 .pc-side-led{
   width:9px;height:9px;border-radius:50%;
   background:#2a2a2a;border:1px solid #333;
-  transition:background 0.3s,border-color 0.3s,box-shadow 0.3s;flex-shrink:0;
+  transition:background 0.05s,border-color 0.05s,box-shadow 0.05s;flex-shrink:0;
 }
 .pc-side-led.on-g{background:#00E676;border-color:#00E676;box-shadow:0 0 8px rgba(0,230,118,0.85),0 0 20px rgba(0,230,118,0.3)}
 .pc-side-led.on-r{background:#FF3A3A;border-color:#FF3A3A;box-shadow:0 0 8px rgba(255,58,58,0.85),0 0 20px rgba(255,58,58,0.3)}
@@ -803,7 +803,7 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
 .pc-top{display:flex;align-items:center;padding:10px 80px 9px;position:relative;z-index:2}
 .pc-lcol{display:none}
 .pc-led-row{display:flex;align-items:center;gap:3px;margin-bottom:1px}
-.pc-led{width:9px;height:9px;border-radius:50%;background:#111;border:1px solid #1e1e1e;transition:background 0.3s,border-color 0.3s,box-shadow 0.3s}
+.pc-led{width:9px;height:9px;border-radius:50%;background:#111;border:1px solid #1e1e1e;transition:background 0.05s,border-color 0.05s,box-shadow 0.05s}
 .pc-led.g.on{background:#00E676;border-color:#00E676;box-shadow:0 0 8px rgba(0,230,118,0.85),0 0 20px rgba(0,230,118,0.3)}
 .pc-led.r.on{background:#FF3A3A;border-color:#FF3A3A;box-shadow:0 0 8px rgba(255,58,58,0.85),0 0 20px rgba(255,58,58,0.3)}
 .pc-lever{
@@ -846,20 +846,20 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
 .pc-displays{display:flex;padding:0 80px;position:relative;z-index:2}
 .pc-dunit{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px}
 /* 4. Player labels */
-.pc-plbl{font-size:0.62rem;font-weight:800;text-transform:uppercase;letter-spacing:0.14em;color:rgba(200,200,200,0.82);transition:color 0.3s;font-family:'Share Tech Mono',monospace}
+.pc-plbl{font-size:0.62rem;font-weight:800;text-transform:uppercase;letter-spacing:0.14em;color:rgba(200,200,200,0.82);transition:color 0.05s;font-family:'Share Tech Mono',monospace}
 .pc-dunit.active .pc-plbl{color:#D1D1D1;text-shadow:0 0 6px rgba(209,209,209,0.15)}
 /* 8. Display border more visible */
-.pc-disp{width:100%;background:#080808;border-radius:5px;border:1.5px solid #383838;padding:9px 4px 7px;text-align:center;position:relative;overflow:hidden;box-shadow:inset 0 4px 14px rgba(0,0,0,0.95),inset 0 1px 4px #000;transition:border-color 0.3s,box-shadow 0.3s}
+.pc-disp{width:100%;background:#080808;border-radius:5px;border:1.5px solid #383838;padding:9px 4px 7px;text-align:center;position:relative;overflow:hidden;box-shadow:inset 0 4px 14px rgba(0,0,0,0.95),inset 0 1px 4px #000;transition:border-color 0.05s,box-shadow 0.05s}
 .pc-disp::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.07) 3px,rgba(0,0,0,0.07) 4px);pointer-events:none}
 .pc-dunit.active .pc-disp{border-color:#3a3a3a;box-shadow:inset 0 4px 14px rgba(0,0,0,0.95),0 0 16px rgba(255,255,255,0.05)}
 .pc-dunit.flagged .pc-disp{border-color:#FF2020!important;animation:flagPulse 0.5s ease infinite alternate}
 /* 7. Inactive timer readable mid-grey */
-.pc-time{font-family:'Share Tech Mono',monospace;font-size:clamp(2rem,10vw,2.85rem);letter-spacing:0.05em;color:#555;line-height:1;transition:color 0.3s,text-shadow 0.3s;user-select:none;font-variant-numeric:tabular-nums}
+.pc-time{font-family:'Share Tech Mono',monospace;font-size:clamp(2rem,10vw,2.85rem);letter-spacing:0.05em;color:#555;line-height:1;transition:color 0.05s,text-shadow 0.05s;user-select:none;font-variant-numeric:tabular-nums}
 .pc-dunit.active .pc-time{color:#D1D1D1;text-shadow:0 0 8px rgba(209,209,209,0.6),0 0 20px rgba(209,209,209,0.15)}
 .pc-dunit.flagged .pc-time{color:#FF2020!important;text-shadow:0 0 12px rgba(255,32,32,0.6)!important}
 .pc-dunit.warning .pc-time{color:#FF6B00!important;text-shadow:0 0 10px rgba(255,107,0,0.55)!important;animation:warnBlink 1s ease infinite}
 /* 9. Moves count */
-.pc-moves{font-size:0.58rem;color:#808080;font-family:'Share Tech Mono',monospace;transition:color 0.3s;font-weight:600}
+.pc-moves{font-size:0.58rem;color:#808080;font-family:'Share Tech Mono',monospace;transition:color 0.05s;font-weight:600}
 .pc-dunit.active .pc-moves{color:#808080}
 /* 10. Increment badge */
 .pc-inc{position:absolute;bottom:4px;right:6px;font-size:0.5rem;color:#3a3a3a;font-weight:700;letter-spacing:0.04em}
@@ -954,7 +954,7 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
 /* Dot indicator */
 .cc-side-dot{
   width:8px;height:8px;border-radius:50%;flex-shrink:0;
-  transition:background 0.3s,border-color 0.3s,box-shadow 0.3s;
+  transition:background 0.05s,border-color 0.05s,box-shadow 0.05s;
 }
 .cc-side-l .cc-side-dot{background:rgba(0,200,255,0.25);border:1px solid rgba(0,200,255,0.4)}
 .cc-side-r .cc-side-dot{background:rgba(200,0,255,0.25);border:1px solid rgba(200,0,255,0.4)}
@@ -1036,12 +1036,12 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
 .cc-displays{display:flex;padding:0 80px;position:relative;z-index:2}
 .cc-dunit{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px}
 /* 4. Player labels */
-.cc-plbl-1{font-size:0.6rem;font-weight:800;text-transform:uppercase;letter-spacing:0.14em;color:rgba(0,220,255,0.82);font-family:'Orbitron',sans-serif;transition:color 0.3s;text-shadow:0 0 8px rgba(0,200,255,0.3)}
-.cc-plbl-2{font-size:0.6rem;font-weight:800;text-transform:uppercase;letter-spacing:0.14em;color:rgba(220,0,255,0.82);font-family:'Orbitron',sans-serif;transition:color 0.3s;text-shadow:0 0 8px rgba(180,0,255,0.3)}
+.cc-plbl-1{font-size:0.6rem;font-weight:800;text-transform:uppercase;letter-spacing:0.14em;color:rgba(0,220,255,0.82);font-family:'Orbitron',sans-serif;transition:color 0.05s;text-shadow:0 0 8px rgba(0,200,255,0.3)}
+.cc-plbl-2{font-size:0.6rem;font-weight:800;text-transform:uppercase;letter-spacing:0.14em;color:rgba(220,0,255,0.82);font-family:'Orbitron',sans-serif;transition:color 0.05s;text-shadow:0 0 8px rgba(180,0,255,0.3)}
 #cc-p1unit.active .cc-plbl-1{color:rgba(0,239,255,0.95);text-shadow:0 0 8px rgba(0,200,255,0.4)}
 #cc-p2unit.active .cc-plbl-2{color:rgba(238,0,255,0.95);text-shadow:0 0 8px rgba(200,0,255,0.4)}
 /* 8. Display borders more visible */
-.cc-disp{width:100%;background:rgba(0,5,20,0.96);border-radius:9px;padding:9px 4px 7px;text-align:center;position:relative;overflow:hidden;box-shadow:inset 0 4px 15px rgba(0,0,0,0.92);transition:border-color 0.3s,box-shadow 0.3s}
+.cc-disp{width:100%;background:rgba(0,5,20,0.96);border-radius:9px;padding:9px 4px 7px;text-align:center;position:relative;overflow:hidden;box-shadow:inset 0 4px 15px rgba(0,0,0,0.92);transition:border-color 0.05s,box-shadow 0.05s}
 .cc-disp::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.08) 2px,rgba(0,0,0,0.08) 3px);pointer-events:none}
 .cc-disp-1{border:1.5px solid rgba(0,200,255,0.55)}
 .cc-disp-2{border:1.5px solid rgba(200,0,255,0.55)}
@@ -1049,14 +1049,14 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
 #cc-p2unit.active .cc-disp-2{border-color:rgba(238,0,255,0.65);box-shadow:inset 0 4px 15px rgba(0,0,0,0.92),0 0 20px rgba(200,0,255,0.18),0 0 55px rgba(200,0,255,0.07)}
 .cc-dunit.flagged .cc-disp{border-color:#FF2020!important;animation:flagPulse 0.5s ease infinite alternate}
 /* 7. Inactive timers — dimmed but readable cyan/magenta */
-.cc-t1{font-family:'Orbitron',sans-serif;font-weight:700;font-size:clamp(1.75rem,8.5vw,2.6rem);letter-spacing:0.04em;color:rgba(0,180,220,0.82);line-height:1;transition:color 0.3s,text-shadow 0.3s;user-select:none;font-variant-numeric:tabular-nums}
-.cc-t2{font-family:'Orbitron',sans-serif;font-weight:700;font-size:clamp(1.75rem,8.5vw,2.6rem);letter-spacing:0.04em;color:rgba(190,0,230,0.82);line-height:1;transition:color 0.3s,text-shadow 0.3s;user-select:none;font-variant-numeric:tabular-nums}
+.cc-t1{font-family:'Orbitron',sans-serif;font-weight:700;font-size:clamp(1.75rem,8.5vw,2.6rem);letter-spacing:0.04em;color:rgba(0,180,220,0.82);line-height:1;transition:color 0.05s,text-shadow 0.05s;user-select:none;font-variant-numeric:tabular-nums}
+.cc-t2{font-family:'Orbitron',sans-serif;font-weight:700;font-size:clamp(1.75rem,8.5vw,2.6rem);letter-spacing:0.04em;color:rgba(190,0,230,0.82);line-height:1;transition:color 0.05s,text-shadow 0.05s;user-select:none;font-variant-numeric:tabular-nums}
 #cc-p1unit.active .cc-t1{color:#00EFFF;text-shadow:0 0 10px rgba(0,239,255,0.82),0 0 28px rgba(0,239,255,0.4),0 0 58px rgba(0,200,255,0.18)}
 #cc-p2unit.active .cc-t2{color:#EE00FF;text-shadow:0 0 10px rgba(238,0,255,0.82),0 0 28px rgba(238,0,255,0.4),0 0 58px rgba(200,0,255,0.18)}
 .cc-dunit.flagged .cc-t1,.cc-dunit.flagged .cc-t2{color:#FF2020!important;text-shadow:0 0 12px rgba(255,32,32,0.7)!important}
 .cc-dunit.warning .cc-t1,.cc-dunit.warning .cc-t2{color:#FFB300!important;text-shadow:0 0 10px rgba(255,179,0,0.6)!important;animation:warnBlink 1s ease infinite}
 /* 9. Moves count */
-.cc-moves{font-size:0.55rem;color:rgba(0,180,220,0.45);font-family:'Orbitron',sans-serif;transition:color 0.3s;font-weight:600}
+.cc-moves{font-size:0.55rem;color:rgba(0,180,220,0.45);font-family:'Orbitron',sans-serif;transition:color 0.05s;font-weight:600}
 #cc-p1unit.active .cc-moves{color:rgba(0,220,255,0.7)}
 #cc-p2unit.active .cc-moves{color:rgba(220,0,255,0.7)}
 /* 10. Increment badge */
@@ -1175,7 +1175,7 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
 /* Displays */
 .xc-displays{display:flex;padding:0 80px;position:relative;z-index:2;gap:0}
 .xc-dunit{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px}
-.xc-plbl{font-size:0.62rem;font-family:'DM Sans',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:0.14em;color:rgba(16,44,87,0.78);transition:color 0.3s}
+.xc-plbl{font-size:0.62rem;font-family:'DM Sans',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:0.14em;color:rgba(16,44,87,0.78);transition:color 0.05s}
 .xc-dunit.active .xc-plbl{color:rgba(30,115,232,0.95)}
 .xc-disp{
   width:100%;
@@ -1187,7 +1187,7 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
     inset 0 2px 10px rgba(16,44,87,0.12),
     inset 0 1px 3px rgba(16,44,87,0.08),
     inset 0 -1px 0 rgba(255,255,255,0.7);
-  transition:border-color 0.3s,box-shadow 0.3s;
+  transition:border-color 0.05s,box-shadow 0.05s;
 }
 .xc-disp::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,0.55) 0%,rgba(255,255,255,0.1) 35%,transparent 100%);pointer-events:none}
 .xc-dunit.active .xc-disp{
@@ -1200,11 +1200,11 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
     0 0 45px rgba(30,115,232,0.06)
 }
 .xc-dunit.flagged .xc-disp{border-color:#FF3A3A!important;animation:flagPulse 0.5s ease infinite alternate}
-.xc-time{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(2.2rem,10.5vw,3rem);letter-spacing:0.06em;color:#3A6BAF;line-height:1;transition:color 0.3s,text-shadow 0.3s;user-select:none;font-variant-numeric:tabular-nums}
+.xc-time{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(2.2rem,10.5vw,3rem);letter-spacing:0.06em;color:#3A6BAF;line-height:1;transition:color 0.05s,text-shadow 0.05s;user-select:none;font-variant-numeric:tabular-nums}
 .xc-dunit.active .xc-time{color:#1E73E8;text-shadow:0 0 10px rgba(30,115,232,0.4),0 0 28px rgba(30,115,232,0.2),0 0 52px rgba(30,115,232,0.08)}
 .xc-dunit.flagged .xc-time{color:#FF3A3A!important;text-shadow:0 0 12px rgba(255,58,58,0.6)!important}
 .xc-dunit.warning .xc-time{color:#FF8C00!important;text-shadow:0 0 10px rgba(255,140,0,0.55)!important;animation:warnBlink 1s ease infinite}
-.xc-moves{font-size:0.58rem;color:rgba(30,115,232,0.5);font-family:'DM Sans',sans-serif;transition:color 0.3s;font-weight:600}
+.xc-moves{font-size:0.58rem;color:rgba(30,115,232,0.5);font-family:'DM Sans',sans-serif;transition:color 0.05s;font-weight:600}
 .xc-dunit.active .xc-moves{color:rgba(30,115,232,0.75)}
 .xc-inc{position:absolute;bottom:4px;right:6px;font-size:0.5rem;font-family:'DM Sans',sans-serif;color:rgba(30,115,232,0.5);font-weight:700;letter-spacing:0.04em}
 .xc-divider{width:1px;background:linear-gradient(180deg,transparent,rgba(30,115,232,0.15),transparent);margin:4px 3px;flex-shrink:0}
@@ -1405,7 +1405,7 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
 /* Displays — skeleton frosted space window */
 .nv-displays{display:flex;padding:0 80px;position:relative;z-index:2;gap:0}
 .nv-dunit{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px}
-.nv-plbl{font-size:0.58rem;font-family:'Orbitron',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:0.16em;color:rgba(0,180,255,0.55);transition:color 0.3s}
+.nv-plbl{font-size:0.58rem;font-family:'Orbitron',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:0.16em;color:rgba(0,180,255,0.55);transition:color 0.05s}
 .nv-dunit.active .nv-plbl{color:rgba(0,180,255,0.95);text-shadow:0 0 8px rgba(0,180,255,0.5)}
 .nv-disp{
   width:100%;
@@ -1419,7 +1419,7 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
     inset 0 0 20px rgba(0,0,20,0.95),
     inset 0 1px 0 rgba(0,180,255,0.15),
     0 0 15px rgba(0,180,255,0.1);
-  transition:border-color 0.3s,box-shadow 0.3s;
+  transition:border-color 0.05s,box-shadow 0.05s;
 }
 /* Scan line effect on displays */
 .nv-disp::before{
@@ -1440,7 +1440,7 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
   font-family:'Orbitron',sans-serif;font-weight:700;
   font-size:clamp(2rem,10vw,2.8rem);
   letter-spacing:0.08em;color:rgba(120,160,200,0.7);
-  line-height:1;transition:color 0.3s,text-shadow 0.3s;
+  line-height:1;transition:color 0.05s,text-shadow 0.05s;
   user-select:none;font-variant-numeric:tabular-nums;
 }
 .nv-dunit.active .nv-time{
@@ -1449,7 +1449,7 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
 }
 .nv-dunit.flagged .nv-time{color:#FF3A3A!important;text-shadow:0 0 12px rgba(255,58,58,0.7)!important}
 .nv-dunit.warning .nv-time{color:#FF8C00!important;text-shadow:0 0 10px rgba(255,140,0,0.6)!important;animation:warnBlink 1s ease infinite}
-.nv-moves{font-size:0.5rem;color:rgba(0,180,255,0.35);font-family:'Orbitron',sans-serif;transition:color 0.3s;font-weight:600;letter-spacing:0.08em}
+.nv-moves{font-size:0.5rem;color:rgba(0,180,255,0.35);font-family:'Orbitron',sans-serif;transition:color 0.05s;font-weight:600;letter-spacing:0.08em}
 .nv-dunit.active .nv-moves{color:rgba(0,180,255,0.65)}
 .nv-inc{position:absolute;bottom:4px;right:6px;font-size:0.46rem;font-family:'Orbitron',sans-serif;color:rgba(0,180,255,0.45);font-weight:700;letter-spacing:0.04em}
 .nv-divider{width:1px;background:linear-gradient(180deg,transparent,rgba(0,180,255,0.2),transparent);margin:4px 3px;flex-shrink:0}
@@ -1695,7 +1695,7 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
     inset 0 3px 12px rgba(0,0,0,0.9),
     inset 0 1px 0 rgba(201,169,110,0.12),
     inset 0 -1px 0 rgba(0,0,0,0.8);
-  transition:border-color 0.3s,box-shadow 0.3s;
+  transition:border-color 0.05s,box-shadow 0.05s;
 }
 /* Gold inner bezel line */
 .bk-disp::before{
@@ -1724,7 +1724,7 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
   font-size:clamp(2.2rem,10.5vw,3rem);
   letter-spacing:0.06em;
   color:#6B4F2A;
-  line-height:1;transition:color 0.3s,text-shadow 0.3s;
+  line-height:1;transition:color 0.05s,text-shadow 0.05s;
   user-select:none;font-variant-numeric:tabular-nums;
 }
 .bk-dunit.active .bk-time{
@@ -1737,7 +1737,7 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
 }
 .bk-dunit.flagged .bk-time{color:#FF3A3A!important;text-shadow:0 0 12px rgba(255,58,58,0.6)!important}
 .bk-dunit.warning .bk-time{color:#FF8C00!important;text-shadow:0 0 10px rgba(255,140,0,0.55)!important;animation:warnBlink 1s ease infinite}
-.bk-moves{font-size:0.56rem;color:rgba(201,169,110,0.35);font-family:'DM Sans',sans-serif;transition:color 0.3s;font-weight:600;font-style:italic}
+.bk-moves{font-size:0.56rem;color:rgba(201,169,110,0.35);font-family:'DM Sans',sans-serif;transition:color 0.05s;font-weight:600;font-style:italic}
 .bk-dunit.active .bk-moves{color:rgba(201,169,110,0.65)}
 .bk-inc{position:absolute;bottom:4px;right:6px;font-size:0.48rem;font-family:'DM Sans',sans-serif;color:rgba(201,169,110,0.4);font-weight:700;letter-spacing:0.04em}
 .bk-divider{width:1px;background:linear-gradient(180deg,transparent,rgba(201,169,110,0.18),transparent);margin:4px 3px;flex-shrink:0}
@@ -1939,7 +1939,7 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
 /* Display panels — piano black instrument cluster */
 .rs-displays{display:flex;padding:0 80px;position:relative;z-index:2;gap:0}
 .rs-dunit{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px}
-.rs-plbl{font-size:0.62rem;font-family:'DM Sans',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:0.14em;color:rgba(255,255,255,0.4);transition:color 0.3s}
+.rs-plbl{font-size:0.62rem;font-family:'DM Sans',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:0.14em;color:rgba(255,255,255,0.4);transition:color 0.05s}
 .rs-dunit.active .rs-plbl{color:rgba(255,255,255,0.9);text-shadow:0 0 8px rgba(255,24,1,0.4)}
 .rs-disp{
   width:100%;
@@ -1951,7 +1951,7 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
     inset 0 3px 14px rgba(0,0,0,0.95),
     inset 0 1px 0 rgba(255,100,100,0.08),
     inset 0 -1px 0 rgba(0,0,0,0.9);
-  transition:border-color 0.3s,box-shadow 0.3s;
+  transition:border-color 0.05s,box-shadow 0.05s;
 }
 /* Inner red bezel trim */
 .rs-disp::before{
@@ -1979,7 +1979,7 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
   font-family:'Rajdhani',sans-serif;font-weight:700;
   font-size:clamp(2.2rem,10.5vw,3rem);
   letter-spacing:0.06em;color:#8B2020;
-  line-height:1;transition:color 0.3s,text-shadow 0.3s;
+  line-height:1;transition:color 0.05s,text-shadow 0.05s;
   user-select:none;font-variant-numeric:tabular-nums;
 }
 .rs-dunit.active .rs-time{
@@ -1992,7 +1992,7 @@ body{font-family:'DM Sans',sans-serif;background:#0a0a0f;color:#fff;display:flex
 }
 .rs-dunit.flagged .rs-time{color:#FF3A3A!important;text-shadow:0 0 12px rgba(255,58,58,0.7)!important}
 .rs-dunit.warning .rs-time{color:#FF8C00!important;text-shadow:0 0 10px rgba(255,140,0,0.6)!important;animation:warnBlink 1s ease infinite}
-.rs-moves{font-size:0.58rem;color:rgba(255,100,100,0.35);font-family:'DM Sans',sans-serif;transition:color 0.3s;font-weight:600}
+.rs-moves{font-size:0.58rem;color:rgba(255,100,100,0.35);font-family:'DM Sans',sans-serif;transition:color 0.05s;font-weight:600}
 .rs-dunit.active .rs-moves{color:rgba(255,200,200,0.65)}
 .rs-inc{position:absolute;bottom:4px;right:6px;font-size:0.5rem;font-family:'DM Sans',sans-serif;color:rgba(255,100,100,0.45);font-weight:700;letter-spacing:0.04em}
 .rs-divider{width:1px;background:linear-gradient(180deg,transparent,rgba(200,0,0,0.25),transparent);margin:4px 3px;flex-shrink:0}
